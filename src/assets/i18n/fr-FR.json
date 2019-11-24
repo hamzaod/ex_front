@@ -8,7 +8,8 @@
   },
   "CART_PAGE":{
     "REMOVE": "Supprimer",
-    "DATA_NOT_FOUND": "Aucune donnée disponible"
+    "DATA_NOT_FOUND": "Aucune donnée disponible",
+    "FINAL_PRICE": "Prix total"
   },
   "TOOLBAR":{
     "HOME_BTN": "Acceuil",

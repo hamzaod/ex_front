@@ -4,9 +4,7 @@
         {{ book?.price | currency:'EUR' }}
 <button mat-button (click)="removeBookFromCart(book)"> {{ 'CART_PAGE.REMOVE' | translate }} </button>
 </mat-card>
-
-prix total = {{ finalPrice | currency:'EUR'}}
-
+  {{ 'CART_PAGE.FINAL_PRICE' | translate }} = {{ finalPrice | currency:'EUR'}}
 </div>
 <ng-template #empty>
   {{ 'CART_PAGE.DATA_NOT_FOUND' | translate }}
