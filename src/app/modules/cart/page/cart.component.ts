@@ -40,7 +40,7 @@ export class CartComponent implements OnInit {
   }
 
   removeBookFromCart(book: Book){
-    this.cartService.removeFromChart(book);
+    this.cartService.removeFromCart(book);
 
     // Calculate the price when book removed from cart
     if(this.cartService.isNotEmpty())

@@ -18,7 +18,6 @@ export class OfferService {
       .pipe(map((data: any) => data.offers));
   }
 
-
   isPercentageOffer(offerLabel: string) {
    return offerLabel === OfferEnum.PERCENTAGE.toString();
   }
@@ -37,7 +36,7 @@ export class OfferService {
       return finalPrice - (finalPrice * offer.value / 100);
     }
     if(this.isMinusOffer(offer.type)) {
-      return finalPrice -  offer.value;
+      return finalPrice - offer.value;
     }
     if(this.isSliceOffer(offer.type)) {
       const slices = Math.floor(finalPrice / offer.sliceValue)

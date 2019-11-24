@@ -21,14 +21,14 @@ export class CartService {
     return this.currentCartSubject.getValue();
   }
 
-  addData(book: Book): void {
+  addDataToCart(book: Book): void {
     if (!this.isExistInCart(book.isbn)) {
       this.currentCartSubject.next(this.currentCartSubject.getValue().concat([book]));
       this.storageService.store(AppConfig.cartStoreName, this.currentCartSubject.getValue());
     }
   }
 
-  removeFromChart(bookData: Book) {
+  removeFromCart(bookData: Book) {
     let listBooks: Book[] = this.currentCartSubject.getValue();
     listBooks.forEach((book: Book, index) => {
       if(book.isbn === bookData.isbn) { listBooks.splice(index, 1); }

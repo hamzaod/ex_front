@@ -22,8 +22,8 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button *ngIf="!cartService.isExistInCart(book.isbn)" (click)="cartService.addData(book)">{{ 'BOOK_PAGE.ADD_TO_CART' | translate }}</button>
-          <button mat-button *ngIf="cartService.isExistInCart(book.isbn)" (click)="cartService.removeFromChart(book)">{{ 'BOOK_PAGE.REMOVE' | translate }}</button>
+          <button mat-button *ngIf="!cartService.isExistInCart(book.isbn)" (click)="cartService.addDataToCart(book)">{{ 'BOOK_PAGE.ADD_TO_CART' | translate }}</button>
+          <button mat-button *ngIf="cartService.isExistInCart(book.isbn)" (click)="cartService.removeFromCart(book)">{{ 'BOOK_PAGE.REMOVE' | translate }}</button>
         </mat-card-actions>
       </mat-card></mat-grid-tile>
       <div *ngIf="(books | search: 'title': query).length === 0">
