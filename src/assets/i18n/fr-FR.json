@@ -1,0 +1,17 @@
+{
+  "BOOK_PAGE":{
+    "PLACEHOLDER": "Rechercher",
+    "ADD_TO_CART": "Ajouter au panier",
+    "REMOVE": "Supprimer",
+    "DATA_NOT_FOUND": "Aucune donnée disponible",
+    "SEARCH_NOT_FOUND_DATA": "Aucune donnée trouvée"
+  },
+  "CART_PAGE":{
+    "REMOVE": "Supprimer",
+    "DATA_NOT_FOUND": "Aucune donnée disponible"
+  },
+  "TOOLBAR":{
+    "HOME_BTN": "Acceuil",
+    "CART_BTN": "Panier"
+  }
+}

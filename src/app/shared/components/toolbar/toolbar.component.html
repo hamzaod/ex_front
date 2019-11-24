@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="home" (click)="helperService.goToPage(RouterConfig.BOOK_PAGE.path)">{{ 'TOOLBAR.HOME_BTN' | translate }}</span>
+      <span class="spacer"></span>
+      <button mat-raised-button color="primary" class="cart-btn" (click)="helperService.goToPage(RouterConfig.CART_PAGE.path)"
+      matBadge="{{ cartService.isNotEmpty() ? cartService.cartBooks.length : '' }}" matBadgePosition="before" matBadgeColor="accent">
+      {{ 'TOOLBAR.CART_BTN' | translate }}
+  </button>
+    </mat-toolbar-row>
+   
+  </mat-toolbar>
