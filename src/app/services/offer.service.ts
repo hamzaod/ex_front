@@ -18,30 +18,22 @@ export class OfferService {
       .pipe(map((data: any) => data.offers));
   }
 
-  isPercentageOffer(offerLabel: string) {
-   return offerLabel === OfferEnum.PERCENTAGE.toString();
-  }
-
-  isMinusOffer(offerLabel: string) { 
-    return offerLabel === OfferEnum.MINUS.toString();
-  }
-
-  isSliceOffer(offerLabel: string) {
-    return offerLabel === OfferEnum.SLICE.toString();
-  }
-
   calculate(offer: Offer, finalPrice: number): number {
-  
-    if(this.isPercentageOffer(offer.type)) {
-      return finalPrice - (finalPrice * offer.value / 100);
-    }
-    if(this.isMinusOffer(offer.type)) {
-      return finalPrice - offer.value;
-    }
-    if(this.isSliceOffer(offer.type)) {
-      const slices = Math.floor(finalPrice / offer.sliceValue)
-      return finalPrice - slices * offer.value;
-    }
+    switch(offer.type) { 
+      case OfferEnum.PERCENTAGE.toString(): { 
+        return finalPrice - (finalPrice * offer.value / 100);
+        break; 
+      } 
+      case OfferEnum.MINUS.toString(): { 
+        return finalPrice - offer.value;
+        break; 
+      } 
+      case OfferEnum.SLICE.toString(): { 
+        const slices = Math.floor(finalPrice / offer.sliceValue)
+        return finalPrice - slices * offer.value;
+        break; 
+    } 
+   } 
   }
 }
 

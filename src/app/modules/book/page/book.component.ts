@@ -16,7 +16,7 @@ export class BookComponent implements OnInit {
 
   ngOnInit() {
     this.getAllBooks();    
-  }
+  } 
 
   getAllBooks() {
     return this.bookService.getAllBooks().subscribe(
